@@ -1,3 +1,6 @@
 {
-    "root": "./workshop"
+    "root": "./workshop",
+    "structure": {
+        "readme": "container.md"
+    }
   }

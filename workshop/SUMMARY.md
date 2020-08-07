@@ -6,6 +6,8 @@
 
 ### Getting Started
 
+* [What is Kubernetes](k8s.md)
+
 * [Lab 0: Pre-requisite]()
     * [Create an IBM Cloud account / Access an K8s cluster](pre-work/GET_STARTED.md)
     * [Get the IBM Cloud Container Service](Lab0/README.md)
