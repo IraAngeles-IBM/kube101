@@ -1,0 +1,475 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Lab 2: Scale and Update Deployments · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Lab3/" />
+    
+    
+    <link rel="prev" href="../Lab1/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Lab0/">
+            
+                <a href="../Lab0/">
+            
+                    
+                    Lab 0: Get the IBM Cloud Container Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Lab1/">
+            
+                <a href="../Lab1/">
+            
+                    
+                    Lab 1. Set up and deploy your first application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Lab 2: Scale and Update Deployments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Lab3/">
+            
+                <a href="../Lab3/">
+            
+                    
+                    Lab 3: Scale and update apps natively, building multi-tier applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Resources</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://developer.ibm.com">
+            
+                    
+                    IBM Developer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Lab 2: Scale and Update Deployments</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lab-2-scale-and-update-deployments">Lab 2: Scale and Update Deployments</h1>
+<p>In this lab, you&apos;ll learn how to update the number of instances
+a deployment has and how to safely roll out an update of your application
+on Kubernetes.</p>
+<p>For this lab, you need a running deployment of the <code>guestbook</code> application
+from the previous lab. If you need to create it, run:</p>
+<pre><code class="lang-shell">kubectl create deployment guestbook --image=ibmcom/guestbook:v1
+</code></pre>
+<h2 id="1-scale-apps-with-replicas">1. Scale apps with replicas</h2>
+<p>A <em>replica</em> is a copy of a pod that contains a running service. By having
+multiple replicas of a pod, you can ensure your deployment has the available
+resources to handle increasing load on your application.</p>
+<ol>
+<li><p><code>kubectl</code> provides a <code>scale</code> subcommand to change the size of an
+existing deployment. Let&apos;s increase our capacity from a single running instance of
+<code>guestbook</code> up to 10 instances:</p>
+<pre><code class="lang-shell">kubectl scale --replicas=10 deployment guestbook
+</code></pre>
+<p>Kubernetes will now try to make reality match the desired state of
+10 replicas by starting 9 new pods with the same configuration as
+the first.</p>
+</li>
+<li><p>To see your changes being rolled out, you can run:</p>
+<pre><code class="lang-shell">kubectl rollout status deployment guestbook
+</code></pre>
+<p>The rollout might occur so quickly that the following messages might
+<em>not</em> display:</p>
+<pre><code class="lang-shell">$ kubectl rollout status deployment guestbook
+Waiting for rollout to finish: 1 of 10 updated replicas are available...
+Waiting for rollout to finish: 2 of 10 updated replicas are available...
+Waiting for rollout to finish: 3 of 10 updated replicas are available...
+Waiting for rollout to finish: 4 of 10 updated replicas are available...
+Waiting for rollout to finish: 5 of 10 updated replicas are available...
+Waiting for rollout to finish: 6 of 10 updated replicas are available...
+Waiting for rollout to finish: 7 of 10 updated replicas are available...
+Waiting for rollout to finish: 8 of 10 updated replicas are available...
+Waiting for rollout to finish: 9 of 10 updated replicas are available...
+deployment &quot;guestbook&quot; successfully rolled out
+</code></pre>
+</li>
+<li><p>Once the rollout has finished, ensure your pods are running by using:</p>
+<pre><code class="lang-shell">kubectl get pods
+</code></pre>
+<p>You should see output listing 10 replicas of your deployment:</p>
+<pre><code class="lang-shell">$ kubectl get pods
+NAME                        READY     STATUS    RESTARTS   AGE
+guestbook-562211614-1tqm7   1/1       Running   0          1d
+guestbook-562211614-1zqn4   1/1       Running   0          2m
+guestbook-562211614-5htdz   1/1       Running   0          2m
+guestbook-562211614-6h04h   1/1       Running   0          2m
+guestbook-562211614-ds9hb   1/1       Running   0          2m
+guestbook-562211614-nb5qp   1/1       Running   0          2m
+guestbook-562211614-vtfp2   1/1       Running   0          2m
+guestbook-562211614-vz5qw   1/1       Running   0          2m
+guestbook-562211614-zksw3   1/1       Running   0          2m
+guestbook-562211614-zsp0j   1/1       Running   0          2m
+</code></pre>
+</li>
+</ol>
+<p><strong>Tip:</strong> Another way to improve availability is to
+<a href="https://cloud.ibm.com/docs/containers?topic=containers-ha_clusters#ha_clusters" target="_blank">add clusters and regions</a>
+to your deployment, as shown in the following diagram:</p>
+<p><img src="../images/cs_cluster_ha_roadmap_multizone_public.png" alt="HA with more clusters and regions"></p>
+<h2 id="2-update-and-roll-back-apps">2. Update and roll back apps</h2>
+<p>Kubernetes allows you to do rolling upgrade of your application to a new
+container image. This allows you to easily update the running image and also allows you to
+easily undo a rollout if a problem is discovered during or after deployment.</p>
+<p>In the previous lab, we used an image with a <code>v1</code> tag. For our upgrade
+we&apos;ll use the image with the <code>v2</code> tag.</p>
+<p>To update and roll back:</p>
+<ol>
+<li><p>Using <code>kubectl</code>, you can now update your deployment to use the
+<code>v2</code> image. <code>kubectl</code> allows you to change details about existing
+resources with the <code>set</code> subcommand. We can use it to change the
+image being used.</p>
+<pre><code class="lang-shell"> kubectl set image deployment/guestbook guestbook=ibmcom/guestbook:v2
+</code></pre>
+<p>Note that a pod could have multiple containers, each with its own name.
+Each image can be changed individually or all at once by referring to the name.
+In the case of our <code>guestbook</code> Deployment, the container name is also <code>guestbook</code>.
+Multiple containers can be updated at the same time.
+(<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-image-em-" target="_blank">More information</a>.)</p>
+</li>
+<li><p>To check the status of the rollout, run:</p>
+<pre><code class="lang-shell">kubectl rollout status deployment/guestbook
+</code></pre>
+<p>The rollout might occur so quickly that the following messages
+might <em>not</em> display:</p>
+<pre><code class="lang-shell">$ kubectl rollout status deployment/guestbook
+Waiting for rollout to finish: 2 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 3 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 3 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 3 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 4 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 4 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 4 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 4 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 4 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 5 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 5 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 5 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 6 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 6 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 6 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 7 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 7 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 7 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 7 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 8 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 8 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 8 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 8 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 9 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 9 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 9 out of 10 new replicas have been updated...
+Waiting for rollout to finish: 1 old replicas are pending termination...
+Waiting for rollout to finish: 1 old replicas are pending termination...
+Waiting for rollout to finish: 1 old replicas are pending termination...
+Waiting for rollout to finish: 9 of 10 updated replicas are available...
+Waiting for rollout to finish: 9 of 10 updated replicas are available...
+Waiting for rollout to finish: 9 of 10 updated replicas are available...
+deployment &quot;guestbook&quot; successfully rolled out
+</code></pre>
+</li>
+<li><p>Test the application as before, by accessing <code>&lt;public-IP&gt;:&lt;nodeport&gt;</code>
+in the browser to confirm your new code is active.</p>
+<p>Remember, to get the &quot;nodeport&quot; and &quot;public-ip&quot; use the following commands. Replace <code>$CLUSTER_NAME</code> with the name of your cluster if the environment variable is not set.:</p>
+<pre><code class="lang-shell">kubectl describe service guestbook
+</code></pre>
+<p>and</p>
+<pre><code class="lang-shell">ibmcloud ks workers --cluster $CLUSTER_NAME
+</code></pre>
+<p>To verify that you&apos;re running &quot;v2&quot; of guestbook, look at the title of the page,
+it should now be <code>Guestbook - v2</code>. If you are using a browser, make sure you force refresh (invalidating your cache).</p>
+</li>
+<li><p>If you want to undo your latest rollout, use:</p>
+<pre><code class="lang-shell">kubectl rollout undo deployment guestbook
+</code></pre>
+<p>You can then use this command to see the status:</p>
+<pre><code class="lang-shell">kubectl rollout status deployment/guestbook
+</code></pre>
+</li>
+<li><p>When doing a rollout, you see references to <em>old</em> replicas and <em>new</em> replicas.
+The <em>old</em> replicas are the original 10 pods deployed when we scaled the application.
+The <em>new</em> replicas come from the newly created pods with the different image.
+All of these pods are owned by the Deployment.
+The deployment manages these two sets of pods with a resource called a ReplicaSet.
+We can see the guestbook ReplicaSets with:</p>
+<pre><code class="lang-shell">$ kubectl get replicasets -l app=guestbook
+NAME                   DESIRED   CURRENT   READY     AGE
+guestbook-5f5548d4f    10        10        10        21m
+guestbook-768cc55c78   0         0         0         3h
+</code></pre>
+</li>
+</ol>
+<p>Before we continue, let&apos;s delete the application so we can learn about
+a different way to achieve the same results:</p>
+<p> To remove the deployment, use </p>
+<pre><code class="lang-shell"> kubectl delete deployment guestbook
+</code></pre>
+<p> To remove the service, use:</p>
+<pre><code class="lang-shell"> kubectl delete service guestbook
+</code></pre>
+<p>Congratulations! You deployed the second version of the app. Lab 2
+is now complete. Continue to the <a href="../Lab3/">next lab of this course</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Lab1/" class="navigation navigation-prev " aria-label="Previous page: Lab 1. Set up and deploy your first application">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Lab3/" class="navigation navigation-next " aria-label="Next page: Lab 3: Scale and update apps natively, building multi-tier applications">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Lab 2: Scale and Update Deployments","level":"2.2","depth":1,"next":{"title":"Lab 3: Scale and update apps natively, building multi-tier applications","level":"2.3","depth":1,"path":"Lab3/README.md","ref":"Lab3/README.md","articles":[]},"previous":{"title":"Lab 1. Set up and deploy your first application","level":"2.1","depth":1,"path":"Lab1/README.md","ref":"Lab1/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"Lab2/README.md","mtime":"2020-08-07T07:55:24.267Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-07T08:30:37.445Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

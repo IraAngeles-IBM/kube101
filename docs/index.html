@@ -1,0 +1,429 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Introduction · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Lab0/" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Lab0/">
+            
+                <a href="Lab0/">
+            
+                    
+                    Lab 0: Get the IBM Cloud Container Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Lab1/">
+            
+                <a href="Lab1/">
+            
+                    
+                    Lab 1. Set up and deploy your first application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Lab2/">
+            
+                <a href="Lab2/">
+            
+                    
+                    Lab 2: Scale and Update Deployments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Lab3/">
+            
+                <a href="Lab3/">
+            
+                    
+                    Lab 3: Scale and update apps natively, building multi-tier applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Resources</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://developer.ibm.com">
+            
+                    
+                    IBM Developer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ibm-cloud-kubernetes-service-lab">IBM Cloud Kubernetes Service Lab</h1>
+<p><img src="https://kubernetes.io/images/favicon.png" width="200"></p>
+<h1 id="an-introduction-to-containers">An introduction to containers</h1>
+<p>Hey, are you looking for a containers 101 course? Check out our <a href="https://developer.ibm.com/courses/all/docker-essentials-extend-your-apps-with-containers/" target="_blank">Docker Essentials</a>.</p>
+<p>Containers allow you to run securely isolated applications with quotas on system resources. Containers started out as an individual feature delivered with the linux kernel. Docker launched with making containers easy to use and developers quickly latched onto that idea. Containers have also sparked an interest in microservice architecture, a design pattern for developing applications in which complex applications are down into smaller, composable pieces which work together.</p>
+<p>Watch this <a href="https://www.youtube.com/watch?v=wlBhtc31I8c" target="_blank">video</a> to learn about production uses of containers.</p>
+<h1 id="objectives">Objectives</h1>
+<p>This lab is an introduction to using Docker containers on Kubernetes in the IBM Cloud Kubernetes Service. By the end of the course, you&apos;ll achieve these objectives:</p>
+<ul>
+<li>Understand core concepts of Kubernetes</li>
+<li>Build a Docker image and deploy an application on Kubernetes in the IBM Cloud Kubernetes Service </li>
+<li>Control application deployments, while minimizing your time with infrastructure management</li>
+<li>Add AI services to extend your app </li>
+<li>Secure and monitor your cluster and app</li>
+</ul>
+<h1 id="prerequisites">Prerequisites</h1>
+<ul>
+<li>A Pay-As-You-Go or Subscription <a href="https://console.bluemix.net/registration/" target="_blank">IBM Cloud account</a></li>
+</ul>
+<h1 id="virtual-machines">Virtual machines</h1>
+<p>Prior to containers, most infrastructure ran not on bare metal, but atop hypervisors managing multiple virtualized operating systems (OSes). This arrangement allowed isolation of applications from one another on a higher level than that provided by the OS. These virtualized operating systems see what looks like their own exclusive hardware. However, this also means that each of these virtual operating systems are replicating an entire OS, taking up disk space.</p>
+<h1 id="containers">Containers</h1>
+<p>Containers provide isolation similar to VMs, except provided by the OS and at the process level. Each container is a process or group of processes run in isolation. Typical containers explicitly run only a single process, as they have no need for the standard system services. What they usually need to do can be provided by system calls to the base OS kernel.</p>
+<p>The isolation on linux is provided by a feature called &apos;namespaces&apos;. Each different kind of isolation (IE user, cgroups) is provided by a different namespace.</p>
+<p>This is a list of some of the namespaces that are commonly used and visible to the user:</p>
+<ul>
+<li>PID - process IDs</li>
+<li>USER - user and group IDs</li>
+<li>UTS - hostname and domain name</li>
+<li>NS - mount points</li>
+<li>NET - network devices, stacks, and ports</li>
+<li>CGROUPS - control limits and monitoring of resources</li>
+</ul>
+<h1 id="vm-vs-container">VM vs container</h1>
+<p>Traditional applications are run on native hardware. A single application does not typically use the full resources of a single machine. We try to run multiple applications on a single machine to avoid wasting resources. We could run multiple copies of the same application, but to provide isolation we use VMs to run multiple application instances (VMs) on the same hardware. These VMs have full operating system stacks which make them relatively large and inefficient due to duplication both at runtime and on disk.</p>
+<p><img src="images/VMvsContainer.png" alt="Containers versus VMs"></p>
+<p>Containers allow you to share the host OS. This reduces duplication while still providing the isolation. Containers also allow you to drop unneeded files such as system libraries and binaries to save space and reduce your attack surface. If SSHD or LIBC are not installed, they cannot be exploited.</p>
+<h1 id="get-set-up">Get set up</h1>
+<p>Before we dive into Kubernetes, you need to provision a cluster for your containerized app. Then you won&apos;t have to wait for it to be ready for the subsequent labs. </p>
+<ol>
+<li>You must install the CLIs per <a href="https://console.ng.bluemix.net/docs/containers/cs_cli_install.html" target="_blank">https://console.ng.bluemix.net/docs/containers/cs_cli_install.html</a>. If you do not yet have these CLIs and the Kubernetes CLI, do <a href="Lab0">lab 0</a> before starting the course.</li>
+<li>If you haven&apos;t already, provision a cluster. This can take a few minutes, so let it start first: <code>ibmcloud cs cluster-create --name &lt;name-of-cluster&gt;</code></li>
+<li>After creation, before using the cluster, make sure it has completed provisioning and is ready for use. Run <code>ibmcloud cs clusters</code> and make sure that your cluster is in state &quot;deployed&quot;.  </li>
+<li>Then use <code>ibmcloud cs workers &lt;name-of-cluster&gt;</code> and make sure that all worker nodes are in state &quot;normal&quot; with Status &quot;Ready&quot;.</li>
+</ol>
+<h1 id="kubernetes-and-containers-an-overview">Kubernetes and containers: an overview</h1>
+<p>Let&apos;s talk about Kubernetes orchestration for containers before we build an application on it. We need to understand the following facts about it:</p>
+<ul>
+<li>What is Kubernetes, exactly?</li>
+<li>How was Kubernetes created?</li>
+<li>Kubernetes architecture</li>
+<li>Kubernetes resource model</li>
+<li>Kubernetes at IBM</li>
+<li>Let&apos;s get started</li>
+</ul>
+<h1 id="what-is-kubernetes">What is Kubernetes?</h1>
+<p>Now that we know what containers are, let&apos;s define what Kubernetes is. Kubernetes is a container orchestrator to provision, manage, and scale applications. In other words, Kubernetes allows you to manage the lifecycle of containerized applications within a cluster of nodes (which are a collection of worker machines, for example, VMs, physical machines etc.).</p>
+<p>Your applications may need many other resources to run such as Volumes, Networks,  and Secrets that will help you to do things such as connect to databases, talk to firewalled backends, and secure keys. Kubernetes helps you add these resources into your application. Infrastructure resources needed by applications are managed declaratively.</p>
+<p><strong>Fast fact:</strong> Other orchestration technologies are Mesos and Swarm.  </p>
+<p>The key paradigm of kubernetes is it&#x2019;s Declarative model. The user provides the &quot;desired state&quot; and Kubernetes will do it&apos;s best make it happen. If you need 5 instances, you do not start 5 separate instances on your own but rather tell Kubernetes that you need 5 instances and Kubernetes will reconcile the state automatically. Simply at this point you need to know that you declare the state you want and Kubernetes makes that happen. If something goes wrong with one of your instances and it crashes, Kubernetes still knows the desired state and creates a new instances on an available node.</p>
+<p><strong>Fun to know:</strong> Kubernetes goes by many names. Sometimes it is shortened to <em>k8s</em> (losing the internal 8 letters), or <em>kube</em>. The word is rooted in ancient Greek and means &quot;Helmsman&quot;. A helmsman is the person who steers a ship. We hope you can seen the analogy between directing a ship and the decisions made to orchestrate containers on a cluster.</p>
+<h1 id="how-was-kubernetes-created">How was Kubernetes created?</h1>
+<p>Google wanted to open source their knowledge of creating and running the internal tools Borg &amp; Omega. It adopted Open Governance for Kubernetes by starting the Cloud Native Computing Foundation (CNCF) and giving Kubernetes to that foundation, therefore making it less influenced by Google directly. Many companies such as RedHat, Microsoft, IBM and Amazon quickly joined the foundation.</p>
+<p>Main entry point for the kubernetes project is at <a href="http://kubernetes.io" target="_blank">http://kubernetes.io</a> and the source code can be found at <a href="https://github.com/kubernetes" target="_blank">https://github.com/kubernetes</a>.</p>
+<h1 id="kubernetes-architecture">Kubernetes architecture</h1>
+<p>At its core, Kubernetes is a data store (etcd). The declarative model is stored in the data store as objects, that means when you say I want 5 instances of a container then that request is stored into the data store. This information change is watched and delegated to Controllers to take action. Controllers then react to the model and attempt to take action to achieve the desired state. The power of Kubernetes is in its simplistic model.</p>
+<p>As shown, API server is a simple HTTP server handling create/read/update/delete(CRUD) operations on the data store. Then the controller picks up the change you wanted and makes that happen. Controllers are responsible for instantiating the actual resource represented by any Kubernetes resource. These actual resources are what your application needs to allow it to run successfully.</p>
+<p><img src="images/kubernetes_arch.png" alt="architecture diagram"></p>
+<h1 id="kubernetes-resource-model">Kubernetes resource model</h1>
+<p>Kubernetes Infrastructure defines a resource for every purpose. Each resource is monitored and processed by a controller. When you define your application, it contains a collection of these resources. This collection will then be read by Controllers to build your applications actual backing instances. Some of resources that you may work with are listed below for your reference, for a full list you should go to <a href="https://kubernetes.io/docs/concepts/" target="_blank">https://kubernetes.io/docs/concepts/</a>. In this class we will only use a few of them, like Pod, Deployment, etc.</p>
+<ul>
+<li>Config Maps holds configuration data for pods to consume.</li>
+<li>Daemon Sets ensure that each node in the cluster runs this Pod</li>
+<li>Deployments defines a desired state of a deployment object</li>
+<li>Events provides lifecycle events on Pods and other deployment objects</li>
+<li>Endpoints allows a inbound connections to reach the cluster services</li>
+<li>Ingress is a collection of rules that allow inbound connections to reach the cluster services</li>
+<li>Jobs creates one or more pods and as they complete successfully the job is marked as completed.</li>
+<li>Node is a worker machine in Kubernetes</li>
+<li>Namespaces are multiple virtual clusters backed by the same physical cluster</li>
+<li>Pods are the smallest deployable units of computing that can be created and managed in Kubernetes</li>
+<li>Persistent Volumes provides an API for users and administrators that abstracts details of how storage is provided from how it is consumed</li>
+<li>Replica Sets ensures that a specified number of pod replicas are running at any given time</li>
+<li>Secrets are intended to hold sensitive information, such as passwords, OAuth tokens, and ssh keys</li>
+<li>Service Accounts provides an identity for processes that run in a Pod</li>
+<li>Services  is an abstraction which defines a logical set of Pods and a policy by which to access them - sometimes called a micro-service.</li>
+<li>Stateful Sets is the workload API object used to manage stateful applications.   </li>
+<li>and more...</li>
+</ul>
+<p><img src="images/container-pod-node-master-relationship.jpg" alt="Relationship of pods, nodes, and containers"></p>
+<p>Kubernetes does not have the concept of an application. It has simple building blocks that you are required to compose. Kubernetes is a cloud native platform where the internal resource model is the same as the end user resource model.</p>
+<h1 id="key-resources">Key resources</h1>
+<p>A Pod is the smallest object model that you can create and run. You can add labels to a pod to identify a subset to run operations on. When you are ready to scale your application you can use the label to tell Kubernetes which Pod you need to scale. A Pod typically represent a process in your cluster. Pods contain at least one container that runs the job and additionally may have other containers in it called sidecars for monitoring, logging, etc. Essentially a Pod is a group of containers.</p>
+<p>When we talk about a application, we usually refer to group of Pods. Although an entire application can be run in a single Pod, we usually build multiple Pods that talk to each other to make a useful application. We will see why separating the application logic and backend database into separate Pods will scale better when we build an application shortly.</p>
+<p>Services define how to expose your app as a DNS entry to have a stable reference. We use query based selector to choose which pods are supplying that service.</p>
+<p>The user directly manipulates resources via yaml:
+<code>$ kubectl (create|get|apply|delete) -f myResource.yaml</code></p>
+<p>Kubernetes provides us with a client interface through &#x2018;kubectl&#x2019;. Kubectl commands allow you to manage your applications, manage cluster and cluster resources, by modifying the model in the data store.</p>
+<h1 id="kubernetes-application-deployment-workflow">Kubernetes application deployment workflow</h1>
+<p><img src="images/app_deploy_workflow.png" alt="deployment workflow"></p>
+<ol>
+<li>User via &quot;kubectl&quot; deploys a new application. Kubectl sends the request to the API Server.</li>
+<li>API server receives the request and stores it in the data store (etcd). Once the request is written to data store, the API server is done with the request.</li>
+<li>Watchers detects the resource changes and send a notification to controller to act upon it</li>
+<li>Controller detects the new app and creates new pods to match the desired number# of instances. Any changes to the stored model will be picked up to create or delete Pods.</li>
+<li>Scheduler assigns new pods to a Node based on a criteria. Scheduler makes decisions to run Pods on specific Nodes in the cluster. Scheduler modifies the model with the node information.</li>
+<li>Kubelet on a node detects a pod with an assignment to itself, and deploys the requested containers via the container runtime (e.g. Docker). Each Node watches the storage to see what pods it is assigned to run. It takes necessary actions on resource assigned to it like create/delete Pods.</li>
+<li>Kubeproxy manages network traffic for the pods &#x2013; including service discovery and load-balancing. Kubeproxy is responsible for communication between Pods that want to interact.</li>
+</ol>
+<h1 id="lab-information">Lab information</h1>
+<p>IBM Cloud provides the capability to run applications in containers on Kubernetes. The IBM Cloud Kubernetes Service runs Kubernetes clusters which deliver the following:</p>
+<ul>
+<li>Powerful tools</li>
+<li>Intuitive user experience</li>
+<li>Built-in security and isolation to enable rapid delivery of secure applications</li>
+<li>Cloud services including cognitive capabilities from Watson</li>
+<li>Capability to manage dedicated cluster resources for both stateless applications and stateful workloads</li>
+</ul>
+<h1 id="lab-overview">Lab overview</h1>
+<p><a href="Lab0">Lab 0</a> (Optional): Provides a walkthrough for installing IBM Cloud command-line tools and the Kubernetes CLI. You can skip this lab if you have the IBM Cloud CLI, the container-service plugin, the containers-registry plugin, and the kubectl CLI already installed on your machine.</p>
+<p><a href="Lab1">Lab 1</a>: This lab walks through creating and deploying a simple &quot;guestbook&quot; app written in Go as a net/http Server and accessing it.</p>
+<p><a href="Lab2">Lab 2</a>: Builds on lab 1 to expand to a more resilient setup which can survive having containers fail and recover. Lab 2 will also walk through basic services you need to get started with Kubernetes and the IBM Cloud Kubernetes Service</p>
+<p><a href="Lab3">Lab 3</a>: Builds on lab 2 by increasing the capabilities of the deployed Guestbook application. This lab covers basic distributed application design and how kubernetes helps you use standard design practices.</p>
+<p><a href="Lab4">Lab 4</a>: How to enable your application so Kubernetes can automatically monitor and recover your applications with no user intervention.</p>
+<p><a href="LabD">Lab D</a>: Debugging tips and tricks to help you along your Kubernetes journey. This lab is useful reference that does not follow in a specific sequence of the other labs. </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="Lab0/" class="navigation navigation-next navigation-unique" aria-label="Next page: Lab 0: Get the IBM Cloud Container Service">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Lab 0: Get the IBM Cloud Container Service","level":"1.2","depth":1,"path":"Lab0/README.md","ref":"Lab0/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"README.md","mtime":"2020-08-07T07:55:24.268Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-07T08:30:37.445Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
