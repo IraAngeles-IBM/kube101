@@ -1,0 +1,372 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Create an IBM Cloud account / Access an K8s cluster · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Lab0/" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Lab 0: Pre-requisite
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="GET_STARTED.html">
+            
+                <a href="GET_STARTED.html">
+            
+                    
+                    Create an IBM Cloud account / Access an K8s cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Lab0/">
+            
+                <a href="../Lab0/">
+            
+                    
+                    Get the IBM Cloud Container Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="CLOUD_SHELL.html">
+            
+                <a href="CLOUD_SHELL.html">
+            
+                    
+                    Accessing the IBM Cloud Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Lab1/">
+            
+                <a href="../Lab1/">
+            
+                    
+                    Lab 1. Set up and deploy your first application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Lab2/">
+            
+                <a href="../Lab2/">
+            
+                    
+                    Lab 2: Scale and Update Deployments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../Lab3/">
+            
+                <a href="../Lab3/">
+            
+                    
+                    Lab 3: Scale and update apps natively, building multi-tier applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Resources</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://developer.ibm.com">
+            
+                    
+                    IBM Developer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Create an IBM Cloud account / Access an K8s cluster</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="creating-your-ibm-account-and-accessing-your-openshift-cluster">Creating your IBM account and Accessing your OpenShift cluster</h1>
+<p>In this section, you will login to your own IBM Cloud account, and then get access to a IBM Cloud Lab account which contains pre-provisioned clusters. Each lab attendee will be granted access to one cluster.</p>
+<h2 id="setting-up-your-ibm-cloud-id">Setting up your IBM Cloud ID</h2>
+<ul>
+<li>Log into IBM Cloud with an existing account: <a href="https://cloud.ibm.com" target="_blank">https://cloud.ibm.com</a></li>
+</ul>
+<p>OR</p>
+<ul>
+<li>Create your own: <a href="http://cloud.ibm.com/registration" target="_blank">http://cloud.ibm.com/registration</a></li>
+</ul>
+<h2 id="accessing-the-cluster">Accessing the Cluster</h2>
+<p>Instructors will provide a URL to a web app. Enter your IBMid (the email you used to sign up) and the lab key (also provided by the instructor).</p>
+<p><img src="../.gitbook/assets/get-clusters.png" alt="Get clusters app"></p>
+<p>Follow the instructions on the next page. You will be added to the IBM Workshop account and granted access to a cluster. Note the name of your cluster. In the example below, it&apos;s <code>TorontoMulticlientWorkshop31</code>.</p>
+<p><img src="../.gitbook/assets/access-clusters.png" alt="Instructions to access cluster"></p>
+<p>Back in IBM Cloud, refresh the <a href="https://cloud.ibm.com" target="_blank">IBM Cloud Dashboard</a>. If required, switch to the <strong>1840867-IBM</strong> account by clicking on the account selection drop down in the top nav bar.</p>
+<p><img src="../.gitbook/assets/ibmaccount.png" alt="IBM Account"></p>
+<p>Click on <strong>Clusters</strong> in the <strong>Resource Summary</strong> tile.</p>
+<p><img src="../.gitbook/assets/dashboard.png" alt="Find the Resource Summary tile"></p>
+<p>Under <strong>Clusters</strong>, click on the cluster that has been assigned to you.</p>
+<p><img src="../.gitbook/assets/clusters-overview.png" alt="Choose a cluster"></p>
+<p>Launch the <strong>OpenShift web console</strong> and have a look around! You can come back to this dashboard throughout your lab.</p>
+<p><img src="../.gitbook/assets/launch-console.png" alt="Launch the OpenShift web console"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="../Lab0/" class="navigation navigation-next navigation-unique" aria-label="Next page: Get the IBM Cloud Container Service">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Create an IBM Cloud account / Access an K8s cluster","level":"1.2.1","depth":2,"next":{"title":"Get the IBM Cloud Container Service","level":"1.2.2","depth":2,"path":"Lab0/README.md","ref":"Lab0/README.md","articles":[]},"previous":{"title":"Lab 0: Pre-requisite","level":"1.2","depth":1,"ref":"","articles":[{"title":"Create an IBM Cloud account / Access an K8s cluster","level":"1.2.1","depth":2,"path":"pre-work/GET_STARTED.md","ref":"pre-work/GET_STARTED.md","articles":[]},{"title":"Get the IBM Cloud Container Service","level":"1.2.2","depth":2,"path":"Lab0/README.md","ref":"Lab0/README.md","articles":[]},{"title":"Accessing the IBM Cloud Shell","level":"1.2.3","depth":2,"path":"pre-work/CLOUD_SHELL.md","ref":"pre-work/CLOUD_SHELL.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"pre-work/GET_STARTED.md","mtime":"2020-08-07T09:24:40.023Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-07T09:41:25.135Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
