@@ -22,4 +22,5 @@
 
 ### Resources
 
+* [O'Reilly ebook: Kubernetes in the Enterprise](https://www.ibm.com/account/reg/us-en/signup?formid=urx-34925&cm_mmc=OSocial_Twitter-_-Developer_Innovation-_-WW_WW-_-Kubernetes+in+the+Enterprise+Ebook_ov67299&cm_mmca1=000019RS&cm_mmca2=10004796)
 * [IBM Developer](https://developer.ibm.com)
