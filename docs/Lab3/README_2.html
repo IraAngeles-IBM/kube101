@@ -1,0 +1,636 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Connect to a back-end service · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../LabD/" />
+    
+    
+    <link rel="prev" href="README_1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../k8s.html">
+            
+                <a href="../k8s.html">
+            
+                    
+                    What is Kubernetes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Lab 0: Pre-requisite
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../pre-work/GET_STARTED.html">
+            
+                <a href="../pre-work/GET_STARTED.html">
+            
+                    
+                    Create an IBM Cloud account / Access an K8s cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Lab0/">
+            
+                <a href="../Lab0/">
+            
+                    
+                    Get the IBM Cloud Container Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../pre-work/CLOUD_SHELL.html">
+            
+                <a href="../pre-work/CLOUD_SHELL.html">
+            
+                    
+                    Accessing the IBM Cloud Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Lab1/">
+            
+                <a href="../Lab1/">
+            
+                    
+                    Lab 1. Set up and deploy your first application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Lab2/">
+            
+                <a href="../Lab2/">
+            
+                    
+                    Lab 2: Scale and Update Deployments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    Lab 3: Scale and update apps natively, building multi-tier applications
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="README_1.html">
+            
+                <a href="README_1.html">
+            
+                    
+                    Scale and update apps natively
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3.2" data-path="README_2.html">
+            
+                <a href="README_2.html">
+            
+                    
+                    Connect to a back-end service
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../LabD/">
+            
+                <a href="../LabD/">
+            
+                    
+                    Troubleshooting and Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Resources</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://www.ibm.com/account/reg/us-en/signup?formid=urx-34925&cm_mmc=OSocial_Twitter-_-Developer_Innovation-_-WW_WW-_-Kubernetes+in+the+Enterprise+Ebook_ov67299&cm_mmca1=000019RS&cm_mmca2=10004796">
+            
+                    
+                    O'Reilly ebook: Kubernetes in the Enterprise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://developer.ibm.com">
+            
+                    
+                    IBM Developer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Connect to a back-end service</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lab-3-scale-and-update-apps-natively-building-multi-tier-applications">Lab 3: Scale and update apps natively, building multi-tier applications.</h1>
+<h1 id="2-connect-to-a-back-end-service">2. Connect to a back-end service.</h1>
+<p>If you look at the guestbook source code, under the <code>guestbook/v1/guestbook</code>
+directory, you&apos;ll notice that it is written to support a variety of data
+stores. By default it will keep the log of guestbook entries in memory.
+That&apos;s ok for testing purposes, but as you get into a more &quot;real&quot; environment
+where you scale your application that model will not work because
+based on which instance of the application the user is routed to they&apos;ll see
+very different results.</p>
+<p>To solve this we need to have all instances of our app share the same data
+store - in this case we&apos;re going to use a redis database that we deploy to our
+cluster. This instance of redis will be defined in a similar manner to the guestbook.</p>
+<p><strong>redis-master-deployment.yaml</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> apps/v1
+<span class="hljs-attr">kind:</span> Deployment
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> redis-master
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    app:</span> redis
+<span class="hljs-attr">    role:</span> master
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  replicas:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">  selector:</span>
+<span class="hljs-attr">    matchLabels:</span>
+<span class="hljs-attr">      app:</span> redis
+<span class="hljs-attr">      role:</span> master
+<span class="hljs-attr">  template:</span>
+<span class="hljs-attr">    metadata:</span>
+<span class="hljs-attr">      labels:</span>
+<span class="hljs-attr">        app:</span> redis
+<span class="hljs-attr">        role:</span> master
+<span class="hljs-attr">    spec:</span>
+<span class="hljs-attr">      containers:</span>
+<span class="hljs-attr">      - name:</span> redis-master
+<span class="hljs-attr">        image:</span> redis:<span class="hljs-number">3.2</span><span class="hljs-number">.9</span>
+<span class="hljs-attr">        ports:</span>
+<span class="hljs-attr">        - name:</span> redis-server
+<span class="hljs-attr">          containerPort:</span> <span class="hljs-number">6379</span>
+</code></pre>
+<p>This yaml creates a redis database in a Deployment named &apos;redis-master&apos;.
+It will create a single instance, with replicas set to 1, and the guestbook app instances
+will connect to it to persist data, as well as read the persisted data back.
+The image running in the container is &apos;redis:3.2.9&apos; and exposes the standard redis port 6379.</p>
+<ul>
+<li><p>Create a redis Deployment, like we did for guestbook:</p>
+<pre><code class="lang-shell">  kubectl create -f redis-master-deployment.yaml
+</code></pre>
+</li>
+<li><p>Check to see that redis server pod is running:</p>
+<pre><code class="lang-shell">  $ kubectl get pods -lapp=redis,role=master
+  NAME                 READY     STATUS    RESTARTS   AGE
+  redis-master-q9zg7   1/1       Running   0          2d
+</code></pre>
+</li>
+<li><p>Let us test the redis standalone. Replace the pod name <code>redis-master-q9zg7</code> with the name of your pod.</p>
+<pre><code class="lang-shell">  kubectl exec -it redis-master-q9zg7 redis-cli
+</code></pre>
+<p>  The kubectl exec command will start a secondary process in the specified
+  container. In this case we&apos;re asking for the &quot;redis-cli&quot; command to be
+  executed in the container named &quot;redis-master-q9zg7&quot;.  When this process
+  ends the &quot;kubectl exec&quot; command will also exit but the other processes in
+  the container will not be impacted.</p>
+<p>  Once in the container we can use the &quot;redis-cli&quot; command to make sure the
+  redis database is running properly, or to configure it if needed.</p>
+<pre><code class="lang-shell">  redis-cli&gt; ping
+  PONG
+  redis-cli&gt; exit
+</code></pre>
+</li>
+</ul>
+<p>Now we need to expose the <code>redis-master</code> Deployment as a Service so that the
+guestbook application can connect to it through DNS lookup. </p>
+<p><strong>redis-master-service.yaml</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Service
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> redis-master
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    app:</span> redis
+<span class="hljs-attr">    role:</span> master
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  ports:</span>
+<span class="hljs-attr">  - port:</span> <span class="hljs-number">6379</span>
+<span class="hljs-attr">    targetPort:</span> redis-server
+<span class="hljs-attr">  selector:</span>
+<span class="hljs-attr">    app:</span> redis
+<span class="hljs-attr">    role:</span> master
+</code></pre>
+<p>This creates a Service object named &apos;redis-master&apos; and configures it to target
+port 6379 on the pods selected by the selectors &quot;app=redis&quot; and &quot;role=master&quot;.</p>
+<ul>
+<li><p>Create the service to access redis master:</p>
+<pre><code class="lang-shell">  kubectl create -f redis-master-service.yaml
+</code></pre>
+</li>
+<li><p>Restart guestbook so that it will find the redis service to use database:</p>
+<pre><code class="lang-shell">  kubectl delete deploy guestbook-v1
+  kubectl create -f guestbook-deployment.yaml
+</code></pre>
+</li>
+<li><p>Test guestbook app using a browser of your choice using the url <code>&lt;your-cluster-ip&gt;:&lt;node-port&gt;</code>, or by refreshing the page if you already have the app open in another window.</p>
+</li>
+</ul>
+<p>You can see now that if you open up multiple browsers and refresh the page
+to access the different copies of guestbook that they all have a consistent state.
+All instances write to the same backing persistent storage, and all instances
+read from that storage to display the guestbook entries that have been stored.</p>
+<p>We have our simple 3-tier application running but we need to scale the
+application if traffic increases. Our main bottleneck is that we only have
+one database server to process each request coming though guestbook. One
+simple solution is to separate the reads and write such that they go to
+different databases that are replicated properly to achieve data consistency.</p>
+<p><img src="../images/Master.png" alt="rw_to_master"></p>
+<p>Create a deployment named &apos;redis-slave&apos; that can talk to redis database to
+manage data reads. In order to scale the database we use the pattern where
+we can scale the reads using redis slave deployment which can run several
+instances to read. Redis slave deployments is configured to run two replicas.</p>
+<p><img src="../images/Master-Slave.png" alt="w_to_master-r_to_slave"></p>
+<p><strong>redis-slave-deployment.yaml</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> apps/v1
+<span class="hljs-attr">kind:</span> Deployment
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> redis-slave
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    app:</span> redis
+<span class="hljs-attr">    role:</span> slave
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  replicas:</span> <span class="hljs-number">2</span>
+<span class="hljs-attr">  selector:</span>
+<span class="hljs-attr">    matchLabels:</span>
+<span class="hljs-attr">      app:</span> redis
+<span class="hljs-attr">      role:</span> slave
+<span class="hljs-attr">  template:</span>
+<span class="hljs-attr">    metadata:</span>
+<span class="hljs-attr">      labels:</span>
+<span class="hljs-attr">        app:</span> redis
+<span class="hljs-attr">        role:</span> slave
+<span class="hljs-attr">    spec:</span>
+<span class="hljs-attr">      containers:</span>
+<span class="hljs-attr">      - name:</span> redis-slave
+<span class="hljs-attr">        image:</span> ibmcom/guestbook-redis-slave:v2
+<span class="hljs-attr">        ports:</span>
+<span class="hljs-attr">        - name:</span> redis-server
+<span class="hljs-attr">          containerPort:</span> <span class="hljs-number">6379</span>
+</code></pre>
+<ul>
+<li><p>Create the pod  running redis slave deployment.</p>
+<pre><code class="lang-shell">kubectl create -f redis-slave-deployment.yaml
+</code></pre>
+<ul>
+<li>Check if all the slave replicas are running</li>
+</ul>
+<pre><code class="lang-shell">$ kubectl get pods -lapp=redis,role=slave
+NAME                READY     STATUS    RESTARTS   AGE
+redis-slave-kd7vx   1/1       Running   0          2d
+redis-slave-wwcxw   1/1       Running   0          2d
+</code></pre>
+</li>
+<li><p>And then go into one of those pods and look at the database to see
+that everything looks right. Replace the pod name <code>redis-slave-kd7vx</code> with your own pod name. If you get the back <code>(empty list or set)</code> when you print the keys, go to the guestbook application and add an entry!</p>
+<pre><code class="lang-shell">$ kubectl exec -it redis-slave-kd7vx  redis-cli
+127.0.0.1:6379&gt; keys *
+1) &quot;guestbook&quot;
+127.0.0.1:6379&gt; lrange guestbook 0 10
+1) &quot;hello world&quot;
+2) &quot;welcome to the Kube workshop&quot;
+127.0.0.1:6379&gt; exit
+</code></pre>
+</li>
+</ul>
+<p>Deploy redis slave service so we can access it by DNS name. Once redeployed,
+the application will send &quot;read&quot; operations to the <code>redis-slave</code> pods while
+&quot;write&quot; operations will go to the <code>redis-master</code> pods.</p>
+<p><strong>redis-slave-service.yaml</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> v1
+<span class="hljs-attr">kind:</span> Service
+<span class="hljs-attr">metadata:</span>
+<span class="hljs-attr">  name:</span> redis-slave
+<span class="hljs-attr">  labels:</span>
+<span class="hljs-attr">    app:</span> redis
+<span class="hljs-attr">    role:</span> slave
+<span class="hljs-attr">spec:</span>
+<span class="hljs-attr">  ports:</span>
+<span class="hljs-attr">  - port:</span> <span class="hljs-number">6379</span>
+<span class="hljs-attr">    targetPort:</span> redis-server
+<span class="hljs-attr">  selector:</span>
+<span class="hljs-attr">    app:</span> redis
+<span class="hljs-attr">    role:</span> slave
+</code></pre>
+<ul>
+<li><p>Create the service to access redis slaves.</p>
+<pre><code class="lang-shell">  kubectl create -f redis-slave-service.yaml
+</code></pre>
+</li>
+<li><p>Restart guestbook so that it will find the slave service to read from.</p>
+<pre><code class="lang-shell">  kubectl delete deploy guestbook-v1
+  kubectl create -f guestbook-deployment.yaml
+</code></pre>
+</li>
+<li><p>Test guestbook app using a browser of your choice using the url <code>&lt;your-cluster-ip&gt;:&lt;node-port&gt;</code>, or by refreshing the page if you have the app open in another window.</p>
+</li>
+</ul>
+<p>That&apos;s the end of the lab. Now let&apos;s clean-up our environment:</p>
+<pre><code class="lang-shell">kubectl delete -f guestbook-deployment.yaml
+kubectl delete -f guestbook-service.yaml
+kubectl delete -f redis-slave-service.yaml
+kubectl delete -f redis-slave-deployment.yaml 
+kubectl delete -f redis-master-service.yaml 
+kubectl delete -f redis-master-deployment.yaml
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="README_1.html" class="navigation navigation-prev " aria-label="Previous page: Scale and update apps natively">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../LabD/" class="navigation navigation-next " aria-label="Next page: Troubleshooting and Debugging">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Connect to a back-end service","level":"2.3.2","depth":2,"next":{"title":"Troubleshooting and Debugging","level":"2.4","depth":1,"path":"LabD/README.md","ref":"LabD/README.md","articles":[]},"previous":{"title":"Scale and update apps natively","level":"2.3.1","depth":2,"path":"Lab3/README_1.md","ref":"Lab3/README_1.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"Lab3/README_2.md","mtime":"2020-08-10T08:33:02.980Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-10T08:38:27.419Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
