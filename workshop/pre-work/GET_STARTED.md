@@ -30,8 +30,8 @@ Click on **Clusters** in the **Resource Summary** tile.
 
 Under **Clusters**, click on the cluster that has been assigned to you.
 
-![Choose a cluster](../images/clusters-overview.png)
+![Choose a cluster](../images/ira-cluster.png)
 
-Launch the **OpenShift web console** and have a look around! You can come back to this dashboard throughout your lab.
+<!-- Launch the **OpenShift web console** and have a look around! You can come back to this dashboard throughout your lab.
 
-![Launch the OpenShift web console](../images/launch-console.png)
+![Launch the OpenShift web console](../images/launch-console.png) -->
