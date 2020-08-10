@@ -18,6 +18,7 @@
 * [Lab 1. Set up and deploy your first application](Lab1/README.md)
 * [Lab 2: Scale and Update Deployments](Lab2/README.md)
 * [Lab 3: Scale and update apps natively, building multi-tier applications](Lab3/README.md)
+* [Troubleshooting and Debugging](LabD/README.md)
 
 ### Resources
 

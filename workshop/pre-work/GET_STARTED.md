@@ -1,4 +1,4 @@
-# Creating your IBM account and Accessing your OpenShift cluster
+# Creating your IBM account and Accessing your cluster
 
 In this section, you will login to your own IBM Cloud account, and then get access to a IBM Cloud Lab account which contains pre-provisioned clusters. Each lab attendee will be granted access to one cluster.
 
