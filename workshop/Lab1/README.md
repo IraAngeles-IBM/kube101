@@ -75,6 +75,8 @@ that has already been built and uploaded to DockerHub under the name
 1. Now that you have both the address and the port, you can now access the application in the web browser
    at `<public-IP>:<nodeport>`. In the example case this is `173.193.99.136:31208`.
 
+![guestbook v1](../images/guestbookv1.png)
+
 Congratulations, you've now deployed an application to Kubernetes!
 
 When you're all done, continue to the
