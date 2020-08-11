@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Lab 2: Scale and Update Deployments · GitBook</title>
+        <title>Update and roll back apps · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -58,7 +58,7 @@
 
     
     
-    <link rel="prev" href="../Lab1/" />
+    <link rel="prev" href="README_1.html" />
     
 
     </head>
@@ -206,16 +206,48 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2" data-path="./">
+        <li class="chapter " data-level="2.2" >
             
-                <a href="./">
+                <span>
             
                     
                     Lab 2: Scale and Update Deployments
             
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="README_1.html">
+            
+                <a href="README_1.html">
+            
+                    
+                    Scale apps with replicas
+            
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.2" data-path="README_2.html">
+            
+                <a href="README_2.html">
+            
+                    
+                    Update and roll back apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -379,7 +411,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Lab 2: Scale and Update Deployments</a>
+        <a href=".." >Update and roll back apps</a>
     </h1>
 </div>
 
@@ -399,64 +431,10 @@
 a deployment has and how to safely roll out an update of your application
 on Kubernetes.</p>
 <p>For this lab, you need a running deployment of the <code>guestbook</code> application
-from the previous lab. If you need to create it, run:</p>
-<pre><code class="lang-shell">kubectl create deployment guestbook --image=ibmcom/guestbook:v1
-</code></pre>
-<h2 id="1-scale-apps-with-replicas">1. Scale apps with replicas</h2>
-<p>A <em>replica</em> is a copy of a pod that contains a running service. By having
-multiple replicas of a pod, you can ensure your deployment has the available
-resources to handle increasing load on your application.</p>
-<ol>
-<li><p><code>kubectl</code> provides a <code>scale</code> subcommand to change the size of an
-existing deployment. Let&apos;s increase our capacity from a single running instance of
-<code>guestbook</code> up to 10 instances:</p>
-<pre><code class="lang-shell">kubectl scale --replicas=10 deployment guestbook
-</code></pre>
-<p>Kubernetes will now try to make reality match the desired state of
-10 replicas by starting 9 new pods with the same configuration as
-the first.</p>
-</li>
-<li><p>To see your changes being rolled out, you can run:</p>
-<pre><code class="lang-shell">kubectl rollout status deployment guestbook
-</code></pre>
-<p>The rollout might occur so quickly that the following messages might
-<em>not</em> display:</p>
-<pre><code class="lang-shell">$ kubectl rollout status deployment guestbook
-Waiting for rollout to finish: 1 of 10 updated replicas are available...
-Waiting for rollout to finish: 2 of 10 updated replicas are available...
-Waiting for rollout to finish: 3 of 10 updated replicas are available...
-Waiting for rollout to finish: 4 of 10 updated replicas are available...
-Waiting for rollout to finish: 5 of 10 updated replicas are available...
-Waiting for rollout to finish: 6 of 10 updated replicas are available...
-Waiting for rollout to finish: 7 of 10 updated replicas are available...
-Waiting for rollout to finish: 8 of 10 updated replicas are available...
-Waiting for rollout to finish: 9 of 10 updated replicas are available...
-deployment &quot;guestbook&quot; successfully rolled out
-</code></pre>
-</li>
-<li><p>Once the rollout has finished, ensure your pods are running by using:</p>
-<pre><code class="lang-shell">kubectl get pods
-</code></pre>
-<p>You should see output listing 10 replicas of your deployment:</p>
-<pre><code class="lang-shell">$ kubectl get pods
-NAME                        READY     STATUS    RESTARTS   AGE
-guestbook-562211614-1tqm7   1/1       Running   0          1d
-guestbook-562211614-1zqn4   1/1       Running   0          2m
-guestbook-562211614-5htdz   1/1       Running   0          2m
-guestbook-562211614-6h04h   1/1       Running   0          2m
-guestbook-562211614-ds9hb   1/1       Running   0          2m
-guestbook-562211614-nb5qp   1/1       Running   0          2m
-guestbook-562211614-vtfp2   1/1       Running   0          2m
-guestbook-562211614-vz5qw   1/1       Running   0          2m
-guestbook-562211614-zksw3   1/1       Running   0          2m
-guestbook-562211614-zsp0j   1/1       Running   0          2m
-</code></pre>
-</li>
-</ol>
-<p><strong>Tip:</strong> Another way to improve availability is to
-<a href="https://cloud.ibm.com/docs/containers?topic=containers-ha_clusters#ha_clusters" target="_blank">add clusters and regions</a>
-to your deployment, as shown in the following diagram:</p>
-<p><img src="../images/cs_cluster_ha_roadmap_multizone_public.png" alt="HA with more clusters and regions"></p>
+from the previous lab. If you need to create it, go to Lab 1, step 1.</p>
+<!-- ```shell
+kubectl create deployment guestbook --image=ibmcom/guestbook:v1
+``` -->
 <h2 id="2-update-and-roll-back-apps">2. Update and roll back apps</h2>
 <p>Kubernetes allows you to do rolling upgrade of your application to a new
 container image. This allows you to easily update the running image and also allows you to
@@ -589,7 +567,7 @@ is now complete. Continue to the <a href="../Lab3/README.md">next lab of this co
 
             
                 
-                <a href="../Lab1/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Lab 1. Set up and deploy your first application">
+                <a href="README_1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Scale apps with replicas">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -601,7 +579,7 @@ is now complete. Continue to the <a href="../Lab3/README.md">next lab of this co
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Lab 2: Scale and Update Deployments","level":"2.2","depth":1,"next":{"title":"Lab 3: Scale and update apps natively, building multi-tier applications","level":"2.3","depth":1,"ref":"","articles":[{"title":"Scale and update apps natively","level":"2.3.1","depth":2,"path":"Lab3/README_1.md","ref":"Lab3/README_1.md","articles":[]},{"title":"Connect to a back-end service","level":"2.3.2","depth":2,"path":"Lab3/README_2.md","ref":"Lab3/README_2.md","articles":[]}]},"previous":{"title":"Lab 1. Set up and deploy your first application","level":"2.1","depth":1,"path":"Lab1/README.md","ref":"Lab1/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"Lab2/README.md","mtime":"2020-08-11T06:22:51.696Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-11T06:23:04.492Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Update and roll back apps","level":"2.2.2","depth":2,"next":{"title":"Lab 3: Scale and update apps natively, building multi-tier applications","level":"2.3","depth":1,"ref":"","articles":[{"title":"Scale and update apps natively","level":"2.3.1","depth":2,"path":"Lab3/README_1.md","ref":"Lab3/README_1.md","articles":[]},{"title":"Connect to a back-end service","level":"2.3.2","depth":2,"path":"Lab3/README_2.md","ref":"Lab3/README_2.md","articles":[]}]},"previous":{"title":"Scale apps with replicas","level":"2.2.1","depth":2,"path":"Lab2/README_1.md","ref":"Lab2/README_1.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"Lab2/README_2.md","mtime":"2020-08-11T06:36:12.446Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-11T06:37:40.475Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
