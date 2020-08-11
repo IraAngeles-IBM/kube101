@@ -21,7 +21,7 @@
 * [Lab 3: Scale and update apps natively, building multi-tier applications]()
     * [Scale and update apps natively](Lab3/README_1.md)
     * [Connect to a back-end service](Lab3/README_2.md)
-* [Troubleshooting and Debugging](LabD/README.md)
+* [Lab D: Troubleshooting and Debugging](LabD/README.md)
 
 ### Resources
 
