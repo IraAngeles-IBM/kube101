@@ -238,6 +238,8 @@ spec:
     
 - Test guestbook app using a browser of your choice using the url `<your-cluster-ip>:<node-port>`, or by refreshing the page if you have the app open in another window.
 
+  ![guestbook v1](../images/guestbookv1.png)
+
 That's the end of the lab. Now let's clean-up our environment:
 
 ```shell
