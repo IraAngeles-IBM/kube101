@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Create an IBM Cloud account / Access an K8s cluster · GitBook</title>
+        <title>Create an IBM Cloud account · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="CLOUD_SHELL.html" />
+    <link rel="next" href="ACCESS_CLUSTER.html" />
     
     
     <link rel="prev" href="../Lab0/" />
@@ -144,12 +144,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2" data-path="GET_STARTED.html">
+        <li class="chapter active" data-level="1.3.2" data-path="CREATE_IBMID.html">
             
-                <a href="GET_STARTED.html">
+                <a href="CREATE_IBMID.html">
             
                     
-                    Create an IBM Cloud account / Access an K8s cluster
+                    Create an IBM Cloud account
             
                 </a>
             
@@ -157,7 +157,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="CLOUD_SHELL.html">
+        <li class="chapter " data-level="1.3.3" data-path="ACCESS_CLUSTER.html">
+            
+                <a href="ACCESS_CLUSTER.html">
+            
+                    
+                    Access an K8s cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="CLOUD_SHELL.html">
             
                 <a href="CLOUD_SHELL.html">
             
@@ -368,7 +381,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Create an IBM Cloud account / Access an K8s cluster</a>
+        <a href=".." >Create an IBM Cloud account</a>
     </h1>
 </div>
 
@@ -383,7 +396,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="creating-your-ibm-account-and-accessing-your-cluster">Creating your IBM account and Accessing your cluster</h1>
+                                <h1 id="creating-your-ibm-account">Creating your IBM account</h1>
 <p>In this section, you will login to your own IBM Cloud account, and then get access to a IBM Cloud Lab account which contains pre-provisioned clusters. Each lab attendee will be granted access to one cluster.</p>
 <h2 id="setting-up-your-ibm-cloud-id">Setting up your IBM Cloud ID</h2>
 <ul>
@@ -393,20 +406,6 @@
 <ul>
 <li>Create your own: <a href="http://cloud.ibm.com/registration" target="_blank">http://cloud.ibm.com/registration</a></li>
 </ul>
-<h2 id="accessing-the-cluster">Accessing the Cluster</h2>
-<p>Instructors will provide a URL to a web app. Enter your IBMid (the email you used to sign up) and the lab key (also provided by the instructor).</p>
-<p><img src="../images/get-clusters.png" alt="Get clusters app"></p>
-<p>Follow the instructions on the next page. You will be added to the IBM Workshop account and granted access to a cluster. Note the name of your cluster. In the example below, it&apos;s <code>TorontoMulticlientWorkshop31</code>.</p>
-<p><img src="../images/access-clusters.png" alt="Instructions to access cluster"></p>
-<p>Back in IBM Cloud, refresh the <a href="https://cloud.ibm.com" target="_blank">IBM Cloud Dashboard</a>. If required, switch to the <strong>1840867-IBM</strong> account by clicking on the account selection drop down in the top nav bar.</p>
-<p><img src="../images/ibmaccount.png" alt="IBM Account"></p>
-<p>Click on <strong>Clusters</strong> in the <strong>Resource Summary</strong> tile.</p>
-<p><img src="../images/dashboard.png" alt="Find the Resource Summary tile"></p>
-<p>Under <strong>Clusters</strong>, click on the cluster that has been assigned to you.</p>
-<p><img src="../images/ira-cluster.png" alt="Choose a cluster"></p>
-<!-- Launch the **OpenShift web console** and have a look around! You can come back to this dashboard throughout your lab.
-
-![Launch the OpenShift web console](../images/launch-console.png) -->
 
                                 
                                 </section>
@@ -439,7 +438,7 @@
                 </a>
                 
                 
-                <a href="CLOUD_SHELL.html" class="navigation navigation-next " aria-label="Next page: Accessing the IBM Cloud Shell">
+                <a href="ACCESS_CLUSTER.html" class="navigation navigation-next " aria-label="Next page: Access an K8s cluster">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -450,7 +449,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Create an IBM Cloud account / Access an K8s cluster","level":"1.3.2","depth":2,"next":{"title":"Accessing the IBM Cloud Shell","level":"1.3.3","depth":2,"path":"pre-work/CLOUD_SHELL.md","ref":"pre-work/CLOUD_SHELL.md","articles":[]},"previous":{"title":"Get the IBM Cloud Container Service","level":"1.3.1","depth":2,"path":"Lab0/README.md","ref":"Lab0/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"pre-work/GET_STARTED.md","mtime":"2020-08-10T09:27:11.607Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-11T03:13:40.384Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Create an IBM Cloud account","level":"1.3.2","depth":2,"next":{"title":"Access an K8s cluster","level":"1.3.3","depth":2,"path":"pre-work/ACCESS_CLUSTER.md","ref":"pre-work/ACCESS_CLUSTER.md","articles":[]},"previous":{"title":"Get the IBM Cloud Container Service","level":"1.3.1","depth":2,"path":"Lab0/README.md","ref":"Lab0/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"pre-work/CREATE_IBMID.md","mtime":"2020-08-11T04:23:01.833Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-11T04:24:50.423Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

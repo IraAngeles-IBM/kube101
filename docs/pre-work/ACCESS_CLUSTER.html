@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Troubleshooting and Debugging · GitBook</title>
+        <title>Access an K8s cluster · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="CLOUD_SHELL.html" />
     
-    <link rel="prev" href="../Lab3/README_2.html" />
+    
+    <link rel="prev" href="CREATE_IBMID.html" />
     
 
     </head>
@@ -142,9 +144,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../pre-work/CREATE_IBMID.html">
+        <li class="chapter " data-level="1.3.2" data-path="CREATE_IBMID.html">
             
-                <a href="../pre-work/CREATE_IBMID.html">
+                <a href="CREATE_IBMID.html">
             
                     
                     Create an IBM Cloud account
@@ -155,9 +157,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../pre-work/ACCESS_CLUSTER.html">
+        <li class="chapter active" data-level="1.3.3" data-path="ACCESS_CLUSTER.html">
             
-                <a href="../pre-work/ACCESS_CLUSTER.html">
+                <a href="ACCESS_CLUSTER.html">
             
                     
                     Access an K8s cluster
@@ -168,9 +170,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="../pre-work/CLOUD_SHELL.html">
+        <li class="chapter " data-level="1.3.4" data-path="CLOUD_SHELL.html">
             
-                <a href="../pre-work/CLOUD_SHELL.html">
+                <a href="CLOUD_SHELL.html">
             
                     
                     Accessing the IBM Cloud Shell
@@ -264,9 +266,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4" data-path="./">
+        <li class="chapter " data-level="2.4" data-path="../LabD/">
             
-                <a href="./">
+                <a href="../LabD/">
             
                     
                     Troubleshooting and Debugging
@@ -379,7 +381,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Troubleshooting and Debugging</a>
+        <a href=".." >Access an K8s cluster</a>
     </h1>
 </div>
 
@@ -394,44 +396,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="optional-debugging-lab---tips-and-tricks-for-debugging-applications-in-kubernetes">Optional Debugging Lab - Tips and Tricks for Debugging Applications in Kubernetes</h1>
-<p>Advanced debugging techniques to reach your pods.</p>
-<h2 id="pod-logs">Pod Logs</h2>
-<p>You can look at the logs of any of the pods running under your deployments as follows</p>
-<pre><code class="lang-shell">$ kubectl logs &lt;podname&gt;
-</code></pre>
-<p>Remember that if you have multiple containers running in your pod, you
-have to specify the specific container you want to see logs from.</p>
-<pre><code class="lang-shell">$ kubectl logs &lt;pod-name&gt; &lt;container-name&gt;
-</code></pre>
-<p>This subcommand operates like <code>tail</code>. Including the <code>-f</code> flag will
-continue to stream the logs live once the current time is reached.</p>
-<h2 id="kubectl-edit-and-vi">kubectl edit and vi</h2>
-<p>By default, on many Linux and macOS systems, you will be dropped into the editor <code>vi</code>.</p>
-<pre><code>export EDITOR=nano
-</code></pre><p>On Windows, a copy of <code>notepad.exe</code> will be opened with the contents of the file.</p>
-<h2 id="busybox-pod">busybox pod</h2>
-<p>For debugging live, this command frequently helps me:</p>
-<pre><code class="lang-shell">kubectl create deployment bb --image busybox --restart=Never -it --rm
-</code></pre>
-<p>In the busybox image is a basic shell that contains useful utilities.</p>
-<p>Utils I often use are <code>nslookup</code> and <code>wget</code>. </p>
-<p><code>nslookup</code> is useful for testing DNS resolution in a pod.</p>
-<p><code>wget</code> is useful for trying to do network requests.</p>
-<h2 id="service-endpoints">Service Endpoints</h2>
-<p>Endpoint resource can be used to see all the service endpoints.</p>
-<pre><code class="lang-shell">$ kubectl get endpoints &lt;service&gt;
-</code></pre>
-<h2 id="imagepullpolicy">ImagePullPolicy</h2>
-<p>By default Kubernetes will only pull the image on first use. This can
-be confusing during development when you expect changes to show up.</p>
-<p>You should be aware of the three <code>ImagePullPolicy</code>s:</p>
-<ul>
-<li>IfNotPresent - the default, only request the image if not present.</li>
-<li>Always - always request the image.</li>
-<li>Never</li>
-</ul>
-<p>More details on image management may be <a href="https://kubernetes.io/docs/concepts/containers/images/" target="_blank">found here</a>.</p>
+                                <h1 id="accessing-your-cluster">Accessing your cluster</h1>
+<h2 id="accessing-the-cluster">Accessing the Cluster</h2>
+<p>Instructors will provide a URL to a web app. Enter your IBMid (the email you used to sign up) and the lab key (also provided by the instructor).</p>
+<p><img src="../images/get-clusters.png" alt="Get clusters app"></p>
+<p>Follow the instructions on the next page. You will be added to the IBM Workshop account and granted access to a cluster. Note the name of your cluster. In the example below, it&apos;s <code>TorontoMulticlientWorkshop31</code>.</p>
+<p><img src="../images/access-clusters.png" alt="Instructions to access cluster"></p>
+<p>Back in IBM Cloud, refresh the <a href="https://cloud.ibm.com" target="_blank">IBM Cloud Dashboard</a>. If required, switch to the <strong>1840867-IBM</strong> account by clicking on the account selection drop down in the top nav bar.</p>
+<p><img src="../images/ibmaccount.png" alt="IBM Account"></p>
+<p>Click on <strong>Clusters</strong> in the <strong>Resource Summary</strong> tile.</p>
+<p><img src="../images/dashboard.png" alt="Find the Resource Summary tile"></p>
+<p>Under <strong>Clusters</strong>, click on the cluster that has been assigned to you.</p>
+<p><img src="../images/ira-cluster.png" alt="Choose a cluster"></p>
+<!-- Launch the **OpenShift web console** and have a look around! You can come back to this dashboard throughout your lab.
+
+![Launch the OpenShift web console](../images/launch-console.png) -->
 
                                 
                                 </section>
@@ -459,10 +438,14 @@ be confusing during development when you expect changes to show up.</p>
 
             
                 
-                <a href="../Lab3/README_2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Connect to a back-end service">
+                <a href="CREATE_IBMID.html" class="navigation navigation-prev " aria-label="Previous page: Create an IBM Cloud account">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="CLOUD_SHELL.html" class="navigation navigation-next " aria-label="Next page: Accessing the IBM Cloud Shell">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -471,7 +454,7 @@ be confusing during development when you expect changes to show up.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Troubleshooting and Debugging","level":"2.4","depth":1,"next":{"title":"Introduction to Containers, Kubernetes, and OpenShift","level":"3.1","depth":1,"url":"https://cognitiveclass.ai/courses/kubernetes-course","ref":"https://cognitiveclass.ai/courses/kubernetes-course","articles":[]},"previous":{"title":"Connect to a back-end service","level":"2.3.2","depth":2,"path":"Lab3/README_2.md","ref":"Lab3/README_2.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"LabD/README.md","mtime":"2020-08-07T07:55:24.268Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-11T04:24:50.423Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Access an K8s cluster","level":"1.3.3","depth":2,"next":{"title":"Accessing the IBM Cloud Shell","level":"1.3.4","depth":2,"path":"pre-work/CLOUD_SHELL.md","ref":"pre-work/CLOUD_SHELL.md","articles":[]},"previous":{"title":"Create an IBM Cloud account","level":"1.3.2","depth":2,"path":"pre-work/CREATE_IBMID.md","ref":"pre-work/CREATE_IBMID.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"pre-work/ACCESS_CLUSTER.md","mtime":"2020-08-11T04:23:30.774Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-11T04:24:50.423Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -10,7 +10,8 @@
 
 * [Lab 0: Pre-requisite]()
     * [Get the IBM Cloud Container Service](Lab0/README.md)
-    * [Create an IBM Cloud account / Access an K8s cluster](pre-work/GET_STARTED.md)
+    * [Create an IBM Cloud account](pre-work/CREATE_IBMID.md)
+    * [Access an K8s cluster](pre-work/ACCESS_CLUSTER.md)
     * [Accessing the IBM Cloud Shell](pre-work/CLOUD_SHELL.md)
 
 ### Labs 
