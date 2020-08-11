@@ -167,6 +167,8 @@ To update and roll back:
    To verify that you're running "v2" of guestbook, look at the title of the page,
    it should now be `Guestbook - v2`. If you are using a browser, make sure you force refresh (invalidating your cache).
 
+   ![guestbookv2](../images/guestbookv2.png)
+   
 1. If you want to undo your latest rollout, use:
 
    ```shell
