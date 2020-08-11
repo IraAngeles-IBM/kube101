@@ -168,7 +168,7 @@ To update and roll back:
    it should now be `Guestbook - v2`. If you are using a browser, make sure you force refresh (invalidating your cache).
 
    ![guestbookv2](../images/guestbookv2.png)
-   
+
 1. If you want to undo your latest rollout, use:
 
    ```shell
@@ -193,6 +193,10 @@ To update and roll back:
    guestbook-5f5548d4f    10        10        10        21m
    guestbook-768cc55c78   0         0         0         3h
    ```
+
+To check the rollback:
+
+![guestbook v1](../images/guestbookv1.png)
 
 Before we continue, let's delete the application so we can learn about
 a different way to achieve the same results:
