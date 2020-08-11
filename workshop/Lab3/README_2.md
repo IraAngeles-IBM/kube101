@@ -183,7 +183,7 @@ spec:
  - Check if all the slave replicas are running
 
   ```shell
-  $ kubectl get pods -lapp=redis,role=slave
+  $ kubectl get pods -l app=redis,role=slave
   NAME                READY     STATUS    RESTARTS   AGE
   redis-slave-kd7vx   1/1       Running   0          2d
   redis-slave-wwcxw   1/1       Running   0          2d
