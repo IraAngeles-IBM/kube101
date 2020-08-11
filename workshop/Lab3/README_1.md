@@ -177,4 +177,4 @@ Deployment container spec.
   ibmcloud ks workers --cluster $CLUSTER_NAME
   ```
 
-    ![guestbook v1](../images/guestbookv1.png)
+  ![guestbook v1](../images/guestbookv1.png)
